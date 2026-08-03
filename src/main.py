@@ -1,5 +1,7 @@
 import librosa
+import matplotlib.pyplot as plt
 from pathlib import Path
+
 
 def main():
     print("Music Transcriber Started!")
@@ -12,5 +14,7 @@ def main():
     print(f"Sample rate: {sample_rate}")
     print(f"Number of samples: {len(audio_data)}")
 
+    plt.plot(audio_data[:500])
+    plt.show()
 if __name__ == "__main__":
     main()
