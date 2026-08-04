@@ -11,7 +11,7 @@ def read_midi(file_path):
 
     for note in instrument.notes:
         note_info = {
-            "pitch": note.pitch,
+            "pitch": pretty_midi.note_number_to_name(note.pitch),
         "start": float(note.start),
         "end": float(note.end),
         "duration": float(note.end - note.start),
