@@ -12,27 +12,21 @@ def read_midi(file_path):
     for note in instrument.notes:
         note_info = {
             "pitch": pretty_midi.note_number_to_name(note.pitch),
-        "start": float(note.start),
-        "end": float(note.end),
-        "duration": float(note.end - note.start),
-        "velocity": note.velocity
+            "start": float(note.start),
+            "end": float(note.end),
+            "duration": float(note.end - note.start),
+            "velocity": note.velocity
         }
 
         notes.append(note_info)
 
+    tempo_times, tempos = midi_data.get_tempo_changes()
+    bpm = round(tempos[0])
 
-    return notes
-"""
-    note = instrument.notes[0]
-    duration = note.end - note.start
+    return notes, bpm
 
-    print(note.start)
-    print(note.end)
-    print(note.pitch)
-    print(note.velocity)
-    print(duration)
-"""
-notes = read_midi("twinkle.mid")
+#Not Needed Later on
+notes, bpm = read_midi("twinkle.mid")
 
 for note in notes:
     print(note)
