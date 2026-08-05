@@ -25,8 +25,3 @@ def read_midi(file_path):
 
     return notes, bpm
 
-#Not Needed Later on
-notes, bpm = read_midi("twinkle.mid")
-
-for note in notes:
-    print(note)

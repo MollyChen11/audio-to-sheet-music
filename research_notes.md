@@ -62,7 +62,9 @@ Questions
 - How to detect pickups
 - How to implement and detect tempo changes
 - How to store tempo in MIDI
-- 
-- 
+
+-----------------------------------------------------------------------
+Problems:
+- Note value detection is inaccurate due to early releases, and articulation
 
 
