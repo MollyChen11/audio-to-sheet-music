@@ -66,5 +66,5 @@ Questions
 -----------------------------------------------------------------------
 Problems:
 - Note value detection is inaccurate due to early releases, and articulation
-
+    -Solution: Maybe subtract the start time of the next note and the start time of the last note played
 
